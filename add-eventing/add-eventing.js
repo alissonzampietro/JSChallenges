@@ -7,8 +7,12 @@ const addEventing = function (obj) {
             }
             actions[event].push(callBack)
         },
+        // ...args is converted to array of arguments
         trigger: (event, ...args) => {
-            actions[event].map((callback) => callback(...args))
+            if(actions[event]) {
+                // ...args here is coverter to parameters
+                actions[event].map((callback) => callback(...args))   
+            }
         }
     }
     return returnedObj;

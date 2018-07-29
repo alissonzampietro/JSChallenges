@@ -59,7 +59,7 @@ test('if it is called with an multiple arguments it should pass them to the list
   assert.end()
 })
 
-test.skip('it should not trigger events that were not set to listen', assert => {
+test('it should not trigger events that were not set to listen', assert => {
   const obj = addEventing({ name: 'Kelsey', age: 30 })
   const notCalledEvent = sinon.spy()
 

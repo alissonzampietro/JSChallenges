@@ -14,7 +14,7 @@ test('it should call the callback on the trigger event', assert => {
   assert.end()
 })
 
-test.skip('it should be able to handle multiple callback functions for the same event name', assert => {
+test('it should be able to handle multiple callback functions for the same event name', assert => {
   const obj = addEventing({ name: 'Kelsey', age: 30 })
   const ageChangeEvent = sinon.spy()
   const otherChangeEvent = sinon.spy()
@@ -30,7 +30,7 @@ test.skip('it should be able to handle multiple callback functions for the same 
   assert.end()
 })
 
-test.skip('if it is called with an additional argument it should pass it to the listeners', assert => {
+test('if it is called with an additional argument it should pass it to the listeners', assert => {
   const obj = addEventing({ name: 'Kelsey', age: 30 })
   const ageChangeEvent = sinon.spy()
   const newAge = 31
@@ -44,7 +44,7 @@ test.skip('if it is called with an additional argument it should pass it to the 
   assert.end()
 })
 
-test.skip('if it is called with an multiple arguments it should pass them to the listeners', assert => {
+test('if it is called with an multiple arguments it should pass them to the listeners', assert => {
   const obj = addEventing({ name: 'Kelsey', age: 30 })
   const ageChangeEvent = sinon.spy()
   const newName = 'Alice'
